@@ -1,20 +1,20 @@
 import { LogoutOutlined, MenuOutlined } from "@mui/icons-material"
 import { AppBar, Grid, IconButton, Toolbar, Typography } from "@mui/material"
 
-export const Navbar = ({ draweWidth }) => {
+export const Navbar = ({ drawerWidth = 240 }) => {
   return (
     <AppBar
-      position="fixed"
+      position='fixed'
       sx={{
-        ml: { sm: `${draweWidth}` },
-        width: { sm: `calc(100% - ${draweWidth}px)` }
+        width: {sm: `calc(100% - ${drawerWidth}px)`},
+        ml: {sm: `${drawerWidth}px`}
       }}
     >
       <Toolbar>
         <IconButton
           edge='start'
           color='inherit'
-          sx={{ mr: 2, display: { sm: 'none' } }}
+          sx={{ mr: 2, diplay: {sm: 'none'} }}
         >
           <MenuOutlined />
         </IconButton>
@@ -22,20 +22,18 @@ export const Navbar = ({ draweWidth }) => {
         <Grid
           container
           direction='row'
-          alignItems='center'
           justifyContent='space-between'
+          alignItems='center'
         >
           <Typography
             noWrap
             variant="h6"
             component='div'
           >
-            Journal App
+            My Tasks
           </Typography>
 
-          <IconButton
-            color='error'
-          >
+          <IconButton color="error">
             <LogoutOutlined />
           </IconButton>
         </Grid>
