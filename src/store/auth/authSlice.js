@@ -33,7 +33,7 @@ export const authSlice = createSlice({
       state.email = null,
       state.photoURL = null,
       state.uid = null,
-      state.errorMessage = payload
+      state.errorMessage = payload.errorMessage
       // state = {
       //   ...INITIAL_STATE,
       //   errorMessage: payload.errorMessage
